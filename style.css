@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Raleway:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', Courier, monospace;
+    color: rgba(33, 37, 41, 1);
+    padding: 2rem;
+    background-color: #2D82B7;
+    position: relative;
+}
+
+button.add {
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 3px;
+    background-color: rgba(66, 226, 184, 0.8);
+    cursor: pointer;
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+}
+
+.add:hover,
+.add:active,
+.add:focus {
+    background-color: rgba(66, 226, 184, 1);
+}
+
+/* Note */
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.note {
+    background-color: hsl(51, 91%, 74%);
+    box-shadow: 0 0 10px 4px rgba(0,0,0, 0.1);
+    height: 18.75rem;
+    width: 18.75rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.note .tools {
+    background-color: hsl(51, 91%, 60%);
+    display:flex;
+    justify-content: flex-end;
+}
+
+.note .tools button {
+    border: none;
+    background-color: transparent;
+    color: grey;
+    padding: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;    
+}
+
+.note textarea {
+    width: 100%;
+    height: 15.25rem;
+    background-color: rgba(249, 231, 128, 0.3);
+    padding: 1rem;
+    font-size: 1.25rem;
+}
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+a {
+    color: #42E2B8;
+}
