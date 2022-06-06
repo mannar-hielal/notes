@@ -1,6 +1,12 @@
 const addBtn = document.getElementById("add");
 const notes= document.getElementById("notes");
 
+const savedNotes = JSON.parse(localStorage.getItem("notes"));
+
+if (savedNotes) {
+    savedNotes.forEach(el=> addNewNote(el))
+}
+
 addBtn.addEventListener("click", ()=>  addNewNote());
 
 function addNewNote(text= "") {
@@ -33,18 +39,31 @@ function addNewNote(text= "") {
     textArea.value = text;
     mainText.innerHTML = marked.parse(text);
 
+    updateLocalStorage();
+
     deleteBtn.addEventListener("click", () => {
         note.remove();
+        updateLocalStorage();
     });
 
     editBtn.addEventListener("click", ()=> {
         mainText.classList.toggle("hidden");
         textArea.classList.toggle("hidden");
+        updateLocalStorage();
     });
 
     textArea.addEventListener("input", (e)=> {
         const value = e.target.value;
         mainText.innerHTML = marked.parse(value);
+        updateLocalStorage();
     })
-    
+}
+
+function updateLocalStorage () {
+    const NotesText = document.querySelectorAll("textarea");
+
+    const notesArr = [];
+
+    NotesText.forEach(el=>notesArr.push(el.value));
+    localStorage.setItem("notes", JSON.stringify(notesArr));
 }

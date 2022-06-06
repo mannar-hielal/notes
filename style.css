@@ -15,6 +15,13 @@ body {
     position: relative;
 }
 
+h1.title {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    margin: 6rem auto 3rem;
+}
+
 button.add {
     border: none;
     padding: 0.5rem 1rem;
