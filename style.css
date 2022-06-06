@@ -81,6 +81,12 @@ button.add {
 .note .main-text {
     padding: 1rem;
     font-size: 1.25rem;
+    color: #2f3237;
+}
+
+.note .main-text ul,
+.note .main-text ol {
+    padding-left: 1rem;
 }
 
 /* Footer */

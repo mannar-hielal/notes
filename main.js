@@ -13,8 +13,6 @@ function addNewNote(text= "") {
     const note= document.createElement("div");
     note.classList.add("note");
     note.innerHTML= `
-
-        <div class="note">
             <div class="tools">
             <button class="edit">
                 <i class="fas fa-edit"></i>
@@ -26,7 +24,6 @@ function addNewNote(text= "") {
 
             <div class="main-text ${text? "" : "hidden"}"></div>
             <textarea class="${text? "hidden": ""}"></textarea>
-        </div>
     `;
 
     notes.appendChild(note);
