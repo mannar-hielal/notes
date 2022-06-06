@@ -10,7 +10,7 @@
 body {
     font-family: 'Lato', Courier, monospace;
     color: rgba(33, 37, 41, 1);
-    padding: 2rem;
+    padding-bottom: 2rem;
     background-color: #2D82B7;
     position: relative;
 }
